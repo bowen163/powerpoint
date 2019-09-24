@@ -1,15 +1,13 @@
-//
-//  main.c
-//  powerpoint
-//
-//  Created by s20181102936 on 2019/9/24.
-//  Copyright © 2019 s20181102936. All rights reserved.
-//
-
 #include <stdio.h>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+#include<stdlib.h>
+int main()
+{
+    static signed int i=0xAABBCCDD;
+    char *p;
+    p=(char *)&i;
+    printf("p=%x\n",p);
+    printf("&i=%x\n",&i);
+    printf("*(p+3)=%x\n",*(p+3));
+    printf("*p=%x\n",*p);
     return 0;
 }
